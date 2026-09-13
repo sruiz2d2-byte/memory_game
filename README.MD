@@ -27,3 +27,6 @@ The goal of the game is to find all matching pairs by flipping the cards and rem
 4. If they do not match, they are hidden again.
 5. Find all the matching pairs to win the game.
 
+## Preview
+
+![Trippy Match Preview](./preview.png)
