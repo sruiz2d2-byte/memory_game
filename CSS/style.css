@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("./img/BFondo1.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/* =========================
+   TITULO
+========================= */
+
+#titulo {
+    height: 100px;
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+#titulo h1 {
+    text-align: center;
+    color: #1C2833;
+    font-size: 50px;
+}
+
+
+/* =========================
+   MEMORAMA
+========================= */
+
+.wrap {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#layout {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.card {
+    border: 3px solid black;
+
+    background-image: url("./img/cartasFondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+.card > div {
+    overflow: hidden;
+}
+
+.img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    opacity: 0;
+
+    border-radius: 10px;
+
+    transition: opacity 0.25s ease;
+}
+
+
+/* Esta clase la agrega JavaScript
+   cuando queremos mostrar una carta */
+
+.imgM {
+    opacity: 1 !important;
+}
+
+
+/* Cuando una carta ya fue encontrada */
+
+.fondoCarta {
+    background: white !important;
+}
+
+
+/* =========================
+   MENSAJE DE VICTORIA
+========================= */
+
+#gBox {
+    display: none;
+
+    position: absolute;
+
+    border: 1px solid black;
+
+    width: 650px;
+    height: 200px;
+
+    margin-left: 30%;
+    margin-top: 15%;
+
+    background: black;
+
+    border-radius: 15px;
+
+    z-index: 10;
+}
+
+#gBox p {
+    font-size: 80px;
+    display: block;
+
+    color: white;
+
+    opacity: 0.8;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+#footer p {
+    color: #5DADE2;
+
+    font-family: "Courier New", Courier, monospace;
+
+    font-style: italic;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1083px) {
+
+    #gBox {
+        width: 40%;
+        height: 15%;
+
+        margin-left: 30%;
+        margin-top: 15%;
+
+        border-radius: 15px;
+    }
+
+    #gBox p {
+        font-size: 300%;
+    }
+}
+
+
+@media (max-width: 940px) {
+
+    #layout {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    #gBox p {
+        font-size: 230%;
+    }
+}
+
+
+@media (max-width: 582px) {
+
+    #gBox p {
+        font-size: 190%;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    #layout {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+
+@media (max-width: 430px) {
+
+    #gBox p {
+        font-size: 150%;
+    }
+}
